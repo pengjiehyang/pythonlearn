@@ -43,12 +43,15 @@ while True:
     except ValueError:
           print("請輸入有效的整數")        
  elif 選擇 == "2":
-     print("歡迎來到猜數字(按下0退出)")
-     亂數 = random.randint(1, 100)
-     紀錄次數 = 0
-     目標次數=(int(input("請先設定目標次數")))
+     try:
+         print("歡迎來到猜數字(按下0退出)")
+         亂數 = random.randint(1, 100)
+         紀錄次數 = 0
+         目標次數=(int(input("請先設定目標次數")))
+     except ValueError:
+                print("請輸入有效整數")   
      while True: 
-      猜數字 = (int(input ("請輸入數字數字:")))
+      猜數字 = (int(input ("請輸入數字:")))
       if 猜數字 == 0:
        print("已退出")
        break   
