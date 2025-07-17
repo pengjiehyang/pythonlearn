@@ -85,11 +85,11 @@ while True:
         猜數字 = input("請輸入1-目標次數0的數字(按下0退出):")
  elif 選擇 == "3":
     while True:
-     開始=(int(input("歡迎來到擲骰子(按下0開始，按下7離開)")))
-     if 開始 == 0:
+     開始=input("歡迎來到擲骰子按下0開始，按下7離開")
+     if 開始 == "0":
       print("開始擲骰子")
       print("擲骰子結果:", random.randint(1, 6))
-     elif 開始 == 7:
+     elif 開始 == "7":
       print("已退出")
       break    
      else:
