@@ -1,7 +1,7 @@
 import random
 while True:  
  print("歡迎來到小工具python")   
- 選擇 = input("請選擇你要使用工具，(1)計算機(2)猜數字(3)擲骰子(4):抽籤(5):退出:")
+ 選擇 = input("請選擇你要使用工具，(1)整數計算機(2)猜數字(3)擲骰子(4):抽籤(5)小數計算機(6)離開:")
  if 選擇 == "1":
    while True:
     數字1 = input ("""請輸入你的數字1:
@@ -25,7 +25,7 @@ while True:
           print("計算機已關閉")
           break         
         elif 數字1 == "關於" or 計算符號=="關於" or 數字2=="關於":
-          print("計算機v1.0")
+          print("整數計算機v1.1")
         elif 數字1 == "結束" or 計算符號=="結束" or 數字2=="結束":
           print("計算機已關閉")
           break          
@@ -96,6 +96,46 @@ while True:
         抽籤結果 = random.choice(抽籤.split(","))
         print(f"抽籤結果是: {抽籤結果}")
  elif 選擇 == "5":
+   while True:
+    數字1 = input ("""請輸入你的數字1:
+""")
+    if 數字1 == "結束":
+           print("計算機已關閉")  
+           break 
+    計算符號= input ("請輸入計算符號:" )
+    if 數字1 == "結束" or 計算符號=="結束" :
+           print("計算機已關閉")  
+           break
+    if 計算符號 not in["+","-","*","/","結束","關於"] :
+           print("計算符號錯誤請重新輸入")  
+           break
+    數字2 = input("""請輸入你的數字2:
+""")
+    try:
+        a = (float(數字1))
+        b = (float(數字2))
+        if a == "結束" or 計算符號=="結束" or 數字2=="結束":
+          print("計算機已關閉")
+          break         
+        elif 數字1 == "關於" or 計算符號=="關於" or 數字2=="關於":
+          print("小數計算機v1.0")
+        elif 數字1 == "結束" or 計算符號=="結束" or 數字2=="結束":
+          print("計算機已關閉")
+          break          
+        elif  計算符號 == "+":
+          print("="+str(float(數字1) + float(數字2)))
+        elif 計算符號== "-":   
+          print("="+str(float(數字1) - float(數字2)))
+        elif 計算符號== "*":
+          print("="+str(float(數字1) * float(數字2))) 
+        elif 計算符號== "/":
+         if 數字2 =="0":
+           print("除數不能為零") 
+         else:
+           print("="+ str(float(數字1) / float(數字2)))        
+    except ValueError:
+          print("請輸入有效的數")  
+ elif 選擇 == "6":
     print("已退出")
     break
  else:
