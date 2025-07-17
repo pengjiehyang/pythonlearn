@@ -1,7 +1,7 @@
 import random
 while True:  
  print("歡迎來到小工具python")   
- 選擇 = input("請選擇你要使用工具，(1)計算機(2)猜數字(3)擲骰子(4):退出:")
+ 選擇 = input("請選擇你要使用工具，(1)計算機(2)猜數字(3)擲骰子(4):抽籤(5):退出:")
  if 選擇 == "1":
    while True:
     數字1 = input ("""請輸入你的數字1:
@@ -18,27 +18,30 @@ while True:
            break
     數字2 = input("""請輸入你的數字2:
 """)
-    if 數字1 == "結束" or 計算符號=="結束" or 數字2=="結束":
-           print("計算機已關閉")
-           break         
-    elif 數字1 == "關於" or 計算符號=="關於" or 數字2=="關於":
-       print("計算機v1.0")
-    elif 數字1 == "結束" or 計算符號=="結束" or 數字2=="結束":
-           print("計算機已關閉")
-           break          
-    elif  計算符號 == "+":
-        print("="+str(int(數字1) + int(數字2)))
-    elif 計算符號== "-":   
-        print("="+str(int(數字1) - int(數字2)))
-    elif 計算符號== "*":
-        print("="+str(int(數字1) * int(數字2))) 
-    elif 計算符號== "/":
+    try:
+        a = (int(數字1))
+        b = (int(數字2))
+        if a == "結束" or 計算符號=="結束" or 數字2=="結束":
+          print("計算機已關閉")
+          break         
+        elif 數字1 == "關於" or 計算符號=="關於" or 數字2=="關於":
+          print("計算機v1.0")
+        elif 數字1 == "結束" or 計算符號=="結束" or 數字2=="結束":
+          print("計算機已關閉")
+          break          
+        elif  計算符號 == "+":
+          print("="+str(int(數字1) + int(數字2)))
+        elif 計算符號== "-":   
+          print("="+str(int(數字1) - int(數字2)))
+        elif 計算符號== "*":
+          print("="+str(int(數字1) * int(數字2))) 
+        elif 計算符號== "/":
          if 數字2 =="0":
            print("除數不能為零") 
          else:
-           print("="+ str(int(數字1) / int(數字2)))
-    else:
-        print("無效的計算符號或輸入")           
+           print("="+ str(int(數字1) / int(數字2)))        
+    except ValueError:
+          print("請輸入有效的整數")        
  elif 選擇 == "2":
      print("歡迎來到猜數字(按下0退出)")
      亂數 = random.randint(1, 100)
@@ -84,6 +87,15 @@ while True:
      else:
       print("無效的輸入，請輸入0開始或7退出")
  elif 選擇 == "4":
+    while True:
+      抽籤 = input('請輸入抽籤的內容(以","分隔)(按下0結束):')
+      if 抽籤 == "0":
+        print("已結束抽籤")
+        break
+      else:
+        抽籤結果 = random.choice(抽籤.split(","))
+        print(f"抽籤結果是: {抽籤結果}")
+ elif 選擇 == "5":
     print("已退出")
     break
  else:
