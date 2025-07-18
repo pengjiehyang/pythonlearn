@@ -1,7 +1,6 @@
 import random
 import time
 import os
-import msvcrt
 while True:  
  print("歡迎來到小工具python")   
  選擇 = input("請選擇你要使用工具，(1)整數計算機(2)猜數字(3)擲骰子(4):抽籤(5)小數計算機(6)時鐘(7)離開:")
@@ -220,7 +219,9 @@ while True:
        print("已退出")
        break
       elif 離開 == "":
-       print("正在更新時鐘")
+        os.system ('cls')
+      else:
+        os.system ('cls')
  elif 選擇 == "7":
     print("已退出")
     break
