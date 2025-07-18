@@ -1,7 +1,10 @@
 import random
+import time
+import os
+import msvcrt
 while True:  
  print("歡迎來到小工具python")   
- 選擇 = input("請選擇你要使用工具，(1)整數計算機(2)猜數字(3)擲骰子(4):抽籤(5)小數計算機(6)離開:")
+ 選擇 = input("請選擇你要使用工具，(1)整數計算機(2)猜數字(3)擲骰子(4):抽籤(5)小數計算機(6)時鐘(7)離開:")
  if 選擇 == "1":
    while True:
     數字1 = input ("""請輸入你的數字1:
@@ -208,7 +211,17 @@ while True:
            print("="+ str(float(數字1) / float(數字2)))        
     except ValueError:
           print("請輸入有效的數")  
- elif 選擇 == "6":
+ elif 選擇 == "6" :
+   print("歡迎來到時鐘(按下q離開，按下enter更新)")
+   while True:
+      離開 = input(time.ctime(time.time())).lower()
+      os.system ('cls')
+      if 離開 == "q": 
+       print("已退出")
+       break
+      elif 離開 == "":
+       print("正在更新時鐘")
+ elif 選擇 == "7":
     print("已退出")
     break
  else:
