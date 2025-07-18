@@ -86,15 +86,15 @@ while True:
         猜數字 = input("請輸入1-目標次數0的數字(按下0退出):")
  elif 選擇 == "3":
     while True:
-     開始=input("歡迎來到擲骰子按下0開始，按下7離開")
-     if 開始 == "0":
+     開始=input("歡迎來到擲骰子按下y開始，按下n離開").lower()
+     if 開始 == "y":
       print("開始擲骰子")
       print("擲骰子結果:", random.randint(1, 6))
-     elif 開始 == "7":
+     elif 開始 == "n":
       print("已退出")
       break    
      else:
-      print("無效的輸入，請輸入0開始或7退出")
+      print("無效的輸入，請輸入y開始或輸入n退出")
  elif 選擇 == "4":
       while True:
         抽籤 = input('請輸入抽籤的內容(以","分隔)(按下0結束):')
