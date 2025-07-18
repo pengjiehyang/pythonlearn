@@ -96,14 +96,25 @@ while True:
      else:
       print("無效的輸入，請輸入0開始或7退出")
  elif 選擇 == "4":
-    while True:
-      抽籤 = input('請輸入抽籤的內容(以","分隔)(按下0結束):')
-      if 抽籤 == "0":
-        print("已結束抽籤")
-        break
-      else:
-        抽籤結果 = random.choice(抽籤.split(","))
-        print(f"抽籤結果是: {抽籤結果}")
+      while True:
+        抽籤 = input('請輸入抽籤的內容(以","分隔)(按下0結束):')
+        if 抽籤 == "0":
+         print("已結束抽籤")  
+         break
+        else:
+          抽籤結果 = random.choice(抽籤.split(","))
+          print(f"抽籤結果是: {抽籤結果}")
+          while True:
+           是否重抽 = input("請問重新再抽一遍還是重新設置(1)重抽(2)重新設置")
+           if 是否重抽 == "1":
+            print("重新抽籤")
+            抽籤結果 = random.choice(抽籤.split(","))
+            print(f"抽籤結果是: {抽籤結果}")
+           elif 是否重抽 == "2":
+            print("已結束抽籤")
+            break
+           else:
+            print("無效的輸入，請輸入1或2")
  elif 選擇 == "5":
    while True:
     數字1 = input ("""請輸入你的數字1:
