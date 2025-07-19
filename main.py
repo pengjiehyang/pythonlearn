@@ -6,44 +6,52 @@ while True:
  選擇 = input("請選擇你要使用工具，(1)整數計算機(2)猜數字(3)擲骰子(4):抽籤(5)小數計算機(6)時鐘(7)離開:")
  if 選擇 == "1":
    while True:
-    數字1 = input ("""請輸入你的數字1:
+    結束=input("歡迎來到整數計算機(按下0結束Y/y開始)").lower()
+    if 結束 == "0":
+      print("計算機已結束")
+      break
+    elif 結束 not in["y","0"]:
+      print("輸入錯誤，請重新輸入")  
+    else:
+      print("計算機已開始")
+      數字1 = input ("""請輸入你的數字1:
 """)
-    if 數字1 == "結束":
+      if 數字1 == "結束":
            print("計算機已關閉")  
            break 
-    計算符號= input ("請輸入計算符號:" )
-    if 數字1 == "結束" or 計算符號=="結束" :
+      計算符號= input ("請輸入計算符號:" )
+      if 數字1 == "結束" or 計算符號=="結束" :
            print("計算機已關閉")  
            break
-    if 計算符號 not in["+","-","*","/","結束","關於"] :
+      if 計算符號 not in["+","-","*","/","結束","關於"] :
            print("計算符號錯誤請重新輸入")  
            break
-    數字2 = input("""請輸入你的數字2:
+      數字2 = input("""請輸入你的數字2:
 """)
-    try:
-        a = (int(數字1))
-        b = (int(數字2))
-        if a == "結束" or 計算符號=="結束" or 數字2=="結束":
-          print("計算機已關閉")
-          break         
-        elif 數字1 == "關於" or 計算符號=="關於" or 數字2=="關於":
-          print("整數計算機v1.1")
-        elif 數字1 == "結束" or 計算符號=="結束" or 數字2=="結束":
-          print("計算機已關閉")
-          break          
-        elif  計算符號 == "+":
-          print("="+str(int(數字1) + int(數字2)))
-        elif 計算符號== "-":   
-          print("="+str(int(數字1) - int(數字2)))
-        elif 計算符號== "*":
-          print("="+str(int(數字1) * int(數字2))) 
-        elif 計算符號== "/":
-         if 數字2 =="0":
-           print("除數不能為零") 
-         else:
+      try:
+          a = (int(數字1))
+          b = (int(數字2))
+          if a == "結束" or 計算符號=="結束" or 數字2=="結束":
+           print("計算機已關閉")
+           break         
+          elif 數字1 == "關於" or 計算符號=="關於" or 數字2=="關於":
+           print("整數計算機v1.1")
+          elif 數字1 == "結束" or 計算符號=="結束" or 數字2=="結束":
+           print("計算機已關閉")
+           break          
+          elif  計算符號 == "+":
+           print("="+str(int(數字1) + int(數字2)))
+          elif 計算符號== "-":   
+           print("="+str(int(數字1) - int(數字2)))
+          elif 計算符號== "*":
+           print("="+str(int(數字1) * int(數字2))) 
+          elif 計算符號== "/":
+           if 數字2 =="0":
+            print("除數不能為零") 
+          else:
            print("="+ str(int(數字1) / int(數字2)))        
-    except ValueError:
-          print("請輸入有效的整數")        
+      except ValueError:
+           print("請輸入有效的整數")        
  elif 選擇 == "2":
      模式 =input("請選擇模式:(1)1-100模式(2)自定義模式:")
      if 模式 == "1":
