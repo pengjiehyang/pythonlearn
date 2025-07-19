@@ -180,43 +180,51 @@ while True:
             print("無效的輸入，請輸入1或2")
  elif 選擇 == "5":
    while True:
-    數字1 = input ("""請輸入你的數字1:
+    結束=input("歡迎來到整數計算機(按下0結束Y/y開始)").lower()
+    if 結束 == "0":
+      print("計算機已結束")
+      break
+    elif 結束 not in["y","0"]:
+      print("輸入錯誤，請重新輸入")  
+    else:
+      print("計算機已開始")
+      數字1 = input ("""請輸入你的數字1:
 """)
-    if 數字1 == "結束":
-           print("計算機已關閉")  
-           break 
-    計算符號= input ("請輸入計算符號:" )
-    if 數字1 == "結束" or 計算符號=="結束" :
-           print("計算機已關閉")  
-           break
-    if 計算符號 not in["+","-","*","/","結束","關於"] :
-           print("計算符號錯誤請重新輸入")  
-           break
-    數字2 = input("""請輸入你的數字2:
+      if 數字1 == "結束":
+       print("計算機已關閉")  
+       break 
+      計算符號= input ("請輸入計算符號:" )
+      if 數字1 == "結束" or 計算符號=="結束" :
+        print("計算機已關閉")  
+        break
+      elif 計算符號 not in["+","-","*","/","結束","關於"] :
+        print("計算符號錯誤請重新輸入")  
+        break
+      數字2 = input("""請輸入你的數字2:
 """)
-    try:
-        a = (float(數字1))
-        b = (float(數字2))
-        if a == "結束" or 計算符號=="結束" or 數字2=="結束":
-          print("計算機已關閉")
-          break         
-        elif 數字1 == "關於" or 計算符號=="關於" or 數字2=="關於":
-          print("小數計算機v1.0")
-        elif 數字1 == "結束" or 計算符號=="結束" or 數字2=="結束":
-          print("計算機已關閉")
-          break          
-        elif  計算符號 == "+":
-          print("="+str(float(數字1) + float(數字2)))
-        elif 計算符號== "-":   
-          print("="+str(float(數字1) - float(數字2)))
-        elif 計算符號== "*":
-          print("="+str(float(數字1) * float(數字2))) 
-        elif 計算符號== "/":
-         if 數字2 =="0":
-           print("除數不能為零") 
-         else:
-           print("="+ str(float(數字1) / float(數字2)))        
-    except ValueError:
+      try:
+          a = (float(數字1))
+          b = (float(數字2))
+          if a == "結束" or 計算符號=="結束" or 數字2=="結束":
+           print("計算機已關閉")
+           break         
+          elif 數字1 == "關於" or 計算符號=="關於" or 數字2=="關於":
+           print("小數計算機v1.0")
+          elif 數字1 == "結束" or 計算符號=="結束" or 數字2=="結束":
+           print("計算機已關閉")
+           break          
+          elif  計算符號 == "+":
+           print("="+str(float(數字1) + float(數字2)))
+          elif 計算符號== "-":   
+           print("="+str(float(數字1) - float(數字2)))
+          elif 計算符號== "*":
+           print("="+str(float(數字1) * float(數字2))) 
+          elif 計算符號== "/":
+           if 數字2 =="0":
+            print("除數不能為零") 
+           else:
+            print("="+ str(float(數字1) / float(數字2)))        
+      except ValueError:
           print("請輸入有效的數")  
  elif 選擇 == "6" :
    print("歡迎來到時鐘(按下q離開，按下enter更新)")
