@@ -145,19 +145,20 @@ while True:
             print(f"你輸了。")
             break
          else:
-           print("無效的輸入")
-           猜數字 = input("請再次輸入")   
+           print("無效的輸入，請再次輸入")   
  elif 選擇 == "3":
     while True:
-     開始=input("歡迎來到擲骰子按下y開始，按下n離開").lower()
+     開始 = input("歡迎來到擲骰子按下y開始，按下n離開，或是按下0進入關於頁面。")
      if 開始 == "y":
       print("開始擲骰子")
       print("擲骰子結果:", random.randint(1, 6))
      elif 開始 == "n":
       print("已退出")
-      break    
+      break
+     elif 開始 == "0":
+      print("擲骰子v1.0")
      else:
-      print("無效的輸入，請輸入y開始或輸入n退出")
+      print("無效的輸入，請輸入y開始或輸入n退出或是按下0進入關於頁面")
  elif 選擇 == "4":
       while True:
         抽籤 = input('請輸入抽籤的內容(以","分隔)(按下0結束):')
