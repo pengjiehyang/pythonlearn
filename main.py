@@ -9,6 +9,7 @@ while True:
     結束=input("歡迎來到整數計算機(按下0結束Y/y開始)").lower()
     if 結束 == "0":
       print("計算機已結束")
+      print("感謝你的使用")
       break
     elif 結束 not in["y","0"]:
       print("輸入錯誤，請重新輸入")  
@@ -192,7 +193,8 @@ while True:
       數字1 = input ("""請輸入你的數字1:
 """)
       if 數字1 == "結束":
-       print("計算機已關閉")  
+       print("計算機已關閉")
+       print("感謝你的使用")  
        break 
       計算符號= input ("請輸入計算符號:" )
       if 數字1 == "結束" or 計算符號=="結束" :
@@ -240,7 +242,7 @@ while True:
       else:
         os.system ('cls')
  elif 選擇 == "7":
-   print("小工具v.1.2 release")       
+   print("小工具v.1.2-v2 release")       
  elif 選擇 == "8":
     print("已退出")
     break
