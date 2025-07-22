@@ -161,7 +161,6 @@ while True:
      else:
       print("無效的輸入，請輸入y開始或輸入n退出或是按下0進入關於頁面")
  elif 選擇 == "4":
-      while True:
         抽籤 = input('請輸入抽籤的內容(以","分隔)(按下0結束):')
         if 抽籤 == "0":
          print("已結束抽籤")  
@@ -170,14 +169,17 @@ while True:
           抽籤結果 = random.choice(抽籤.split(","))
           print(f"抽籤結果是: {抽籤結果}")
           while True:
-           是否重抽 = input("請問重新再抽一遍還是重新設置(1)重抽(2)重新設置")
+           是否重抽 = input("請問重新再抽一遍還是重新設置(1)重抽(2)重新設置(3)離開")
            if 是否重抽 == "1":
             print("重新抽籤")
             抽籤結果 = random.choice(抽籤.split(","))
             print(f"抽籤結果是: {抽籤結果}")
            elif 是否重抽 == "2":
-            print("已結束抽籤")
+            print("請重新抽籤")
             break
+           elif 是否重抽 =="3":
+             print("已結束")
+             break
            else:
             print("無效的輸入，請輸入1或2")
  elif 選擇 == "5":
@@ -242,7 +244,7 @@ while True:
       else:
         os.system ('cls')
  elif 選擇 == "7":
-   print("小工具v.1.4 release-2")
+   print("小工具v.1.4-v2 release")
  elif 選擇 == "8":
     while True:
      結束=input("歡迎來到3個數字的整數同符號計算機(按下0結束Y/y開始)").lower()
