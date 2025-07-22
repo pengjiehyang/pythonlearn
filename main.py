@@ -181,7 +181,7 @@ while True:
              print("已結束")
              break
            else:
-            print("無效的輸入，請輸入1或2")
+            print("無效的輸入，請輸入1或2或３")
  elif 選擇 == "5":
    while True:
     結束=input("歡迎來到整數計算機(按下0結束Y/y開始)").lower()
@@ -244,7 +244,7 @@ while True:
       else:
         os.system ('cls')
  elif 選擇 == "7":
-   print("小工具v.1.4-v2 release")
+   print("小工具v.1.4－v2 release-２")
  elif 選擇 == "8":
     while True:
      結束=input("歡迎來到3個數字的整數同符號計算機(按下0結束Y/y開始)").lower()
