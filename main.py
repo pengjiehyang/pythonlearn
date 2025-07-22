@@ -3,7 +3,7 @@ import time
 import os
 while True:  
  print("歡迎來到小工具python")   
- 選擇 = input("請選擇你要使用工具，(1)整數計算機(2)猜數字(3)擲骰子(4):抽籤(5)小數計算機(6)時鐘(7)關於(8)三個整數計算機(9)離開:")
+ 選擇 = input("請選擇你要使用工具，(1)整數計算機(2)猜數字(3)擲骰子(4):抽籤(5)小數計算機(6)時鐘(7)關於(8)三個整數計算機(9)三個小數計算機(Q/q)離開:")
  if 選擇 == "1":
    while True:
     結束=input("歡迎來到整數計算機(按下0結束Y/y開始)").lower()
@@ -328,8 +328,94 @@ while True:
             else:
               print("="+ str(a * b/c))  
       except ValueError:
-        print("請輸入有效的整數")           
+        print("請輸入有效的整數")
  elif 選擇 == "9":
+    while True:
+     結束=input("歡迎來到3個數字的整數同符號計算機(按下0結束Y/y開始)").lower()
+     if 結束 == "0":
+      print("計算機已結束")
+      print("感謝你的使用")
+      break
+     elif 結束 not in["y","0"]:
+      print("輸入錯誤，請重新輸入")  
+     else:
+      print("計算機已開始")
+      數字1 = input ("""請輸入你的數字1:
+""")
+      if 數字1 == "結束":
+           print("計算機已關閉")  
+           break 
+      計算符號1= input ("請輸入第1個計算符號:" )
+      if 數字1 == "結束" or 計算符號1=="結束" :
+           print("計算機已關閉")  
+           break
+      if 計算符號1 not in["+","-","*","/","結束","關於"] :
+           print("計算符號錯誤請重新輸入")  
+           break
+      數字2 = input("""請輸入你的數字2:
+""")
+      計算符號2= input ("請輸入第2個計算符號:" ) 
+      數字3 = input("""請輸入你的數字3:
+""")            
+      try:
+          a = (float(數字1))
+          b = (float(數字2))
+          c =  (float(數字3))
+          if a == "結束" or 計算符號1=="結束" or 數字2=="結束":
+           print("計算機已關閉")
+           break         
+          elif 數字1 == "關於" or 計算符號1=="關於" or 數字2=="關於":
+           print("整數計算機v1.1")
+          elif 數字1 == "結束" or 計算符號1=="結束" or 數字2=="結束":
+           print("計算機已關閉")
+           break          
+          elif  計算符號1 == "+" and 計算符號2 == "+":
+           print("="+str(a+b+c))
+          elif 計算符號1== "+"and 計算符號2 == "-":   
+           print("="+str(a +b-c))
+          elif 計算符號1== "+" and 計算符號2 == "*":
+           print("="+str(a+b*c)) 
+          elif 計算符號1== "+" and 計算符號2 == "/":
+           if 數字3 =="0":
+            print("除數不能為零") 
+           else:
+            print("="+ str(a +b/c))
+          elif 計算符號1 =="-" and 計算符號2 == "+":        
+            print("="+str(a-b+c))
+          elif 計算符號1== "-"and 計算符號2 == "-":   
+           print("="+str(a -b-c))
+          elif 計算符號1== "-" and 計算符號2 == "*":
+           print("="+str(a-b*c)) 
+          elif 計算符號1== "-" and 計算符號2 == "/":
+            if 數字3 =="0":
+             print("除數不能為零")  
+            else:
+              print("="+ str(a / b))
+          elif 計算符號1 =="*" and 計算符號2 == "+":        
+            print("="+str(a*b+c))
+          elif 計算符號1== "*"and 計算符號2 == "-":   
+           print("="+str(a *b-c))
+          elif 計算符號1== "*" and 計算符號2 == "*":
+           print("="+str(a*b*c)) 
+          elif 計算符號1== "*" and 計算符號2 == "/":
+            if 數字3 =="0":
+             print("除數不能為零")  
+            else:
+              print("="+ str(a * b/c))
+          elif 計算符號1 =="/" and 計算符號2 == "+":        
+            print("="+str(a/b+c))
+          elif 計算符號1== "/"and 計算符號2 == "-":   
+           print("="+str(a /b-c))
+          elif 計算符號1== "/" and 計算符號2 == "*":
+           print("="+str(a*b*c)) 
+          elif 計算符號1== "*" and 計算符號2 == "/":
+            if 數字2 =="0":
+             print("除數不能為零")  
+            else:
+              print("="+ str(a * b/c))  
+      except ValueError:
+        print("請輸入有效的整數")    
+ elif 選擇.lower() == "q":
     print("已退出")
     break
  else:
